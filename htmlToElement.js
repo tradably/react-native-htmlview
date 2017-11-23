@@ -107,6 +107,11 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           case 'pre':
             linebreakBefore = opts.lineBreak;
             break;
+          case 'div':
+              if (index !== 0) {
+                linebreakBefore = opts.lineBreak;
+              }
+              break;
           case 'p':
             if (index < list.length - 1) {
               linebreakAfter = opts.paragraphBreak;
