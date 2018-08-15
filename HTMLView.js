@@ -130,18 +130,27 @@ HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
   bullet: PropTypes.string,
   lineBreak: PropTypes.string,
-  NodeComponent: PropTypes.func,
+  NodeComponent: PropTypes.oneOfType([
+     PropTypes.func,
+     PropTypes.element
+  ]),
   nodeComponentProps: PropTypes.object,
   onError: PropTypes.func,
   onLinkPress: PropTypes.func,
   onLinkLongPress: PropTypes.func,
   paragraphBreak: PropTypes.string,
   renderNode: PropTypes.func,
-  RootComponent: PropTypes.func,
+  RootComponent: PropTypes.oneOfType([
+     PropTypes.func,
+     PropTypes.element
+  ]),
   rootComponentProps: PropTypes.object,
   style: ViewPropTypes.style,
   stylesheet: PropTypes.object,
-  TextComponent: PropTypes.func,
+  TextComponent: PropTypes.oneOfType([
+     PropTypes.func,
+     PropTypes.element
+  ]),
   textComponentProps: PropTypes.object,
   value: PropTypes.string,
 };
